@@ -1,0 +1,26 @@
+# requirements.txt — Máquina Expendedora (MicroPython)
+#
+# NOTA IMPORTANTE:
+# Este proyecto corre sobre MicroPython, no sobre CPython/pip.
+# Los módulos "machine" y "utime" son parte del firmware de MicroPython
+# y no se instalan con pip; ya vienen incluidos en el dispositivo.
+#
+# Este archivo documenta las dependencias reales del proyecto para que
+# cualquiera que lo clone sepa qué necesita antes de flashear el código.
+
+# --- Firmware requerido en el microcontrolador ---
+# MicroPython >= 1.20 (o la versión estable más reciente para tu placa)
+# Descarga: https://micropython.org/download/
+
+# --- Driver externo requerido (copiar manualmente al dispositivo, NO vía pip) ---
+# SSD1306.py — driver para pantalla OLED I2C 128x64
+# Fuente oficial: https://github.com/micropython/micropython-lib/tree/master/micropython/drivers/display/ssd1306
+
+# --- Herramientas opcionales para desarrollo en la PC (estas SÍ se instalan con pip) ---
+# Usa estas si quieres subir archivos al microcontrolador desde tu computadora.
+# Descomenta la que prefieras usar:
+
+# adafruit-ampy==1.1.0       # subir/bajar archivos vía USB serial
+# mpremote==1.22.0           # herramienta oficial de MicroPython para REPL y transferencia de archivos
+# rshell==0.0.31             # shell remoto para manejar el sistema de archivos del dispositivo
+# thonny==4.1.4               # IDE gráfico con soporte nativo para MicroPython
